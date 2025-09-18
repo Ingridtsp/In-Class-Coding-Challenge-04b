@@ -6,3 +6,23 @@ let products =[
     { sku:"E400", name:"Sweater", category:"apparel", price:37.95, inventory:32 },
     { sku:"E500", name:"Ice Cream", category:"groceries", price:7.95, inventory:12 },
 ]
+
+//Step 3: Apply category discounts
+for (let product of products){
+    switch(product.category){
+        case "electronics":
+            discount = .2
+            break;
+        case "apparel":
+            discount =.15; 
+            break;
+        case "groceries":
+            discount = .10;
+        default: 
+            discount = 0
+            break;
+
+    }
+    product.promoPrice = product.price * (1 - discount);
+
+}
