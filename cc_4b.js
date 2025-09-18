@@ -23,6 +23,6 @@ for (let product of products){
             break;
 
     }
-    product.promoPrice = product.price * (1 - discount);
+    let promoPrice = product.price * (1 - discount);
 
 }
