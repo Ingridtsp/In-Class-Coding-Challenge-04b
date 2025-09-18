@@ -23,6 +23,27 @@ for (let product of products){
             break;
 
     }
+    
     let promoPrice = product.price * (1 - discount);
+    product.promoPrice = promoPrice;
+
+
+console.log(products)
+
+    //Step 4: customer type discounts 
+    
+    const customers = [
+        { id: 1, customerType: "regular", couponCode: "SAVE10", taxRate: 0.085,
+        cart:[{ sku: "E100", qty: 2 },{ sku: "E200", qty:5}]},
+        { id: 2, customerType: "student", couponCode: "FREESHIP", taxRate: 0.085, 
+        cart:[{ sku: "E300", qty: 2}, { sku: "E500", qty:5}]},
+        { id: 3, customerType: "senior", couponCode: "SHOPSENIOR", taxRate: 0.085,
+        cart:[{ sku: "E500", qty:2}, {sku: "E100", qty:5}]
+        }]
+
+
+
+
+
 
 }
